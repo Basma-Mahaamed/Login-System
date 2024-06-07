@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="container" id="authContainer">
+      <div class="tabs">
+        <div class="tab tab-active" onclick="showTab('signup')">Signup</div>
+        <div class="tab" onclick="showTab('login')">Login</div>
+      </div>
+      <!-- Signup Form -->
+      <div id="signupForm">
+        <h2>Signup</h2>
+        <input type="text" id="signupName" placeholder="Name" />
+        <input type="email" id="signupEmail" placeholder="Email" />
+        <input type="password" id="signupPassword" placeholder="Password" />
+        <button onclick="signUp()">Sign Up</button>
+        <div id="exist" class="message"></div>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm" style="display: none">
+        <h2>Login</h2>
+        <input type="email" id="signinEmail" placeholder="Email" />
+        <input type="password" id="signinPassword" placeholder="Password" />
+        <button onclick="login()">Login</button>
+        <div id="incorrect" class="message"></div>
+      </div>
+    </div>
+
+    <div class="container" id="welcomeContainer" style="display: none">
+      <h2 id="username"></h2>
+      <div class="row" id="data"></div>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
